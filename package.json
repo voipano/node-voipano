@@ -2,10 +2,23 @@
   "name": "voipano",
   "version": "1.0.0",
   "description": "Official Node.js and TypeScript SDK for the Voipano Public API v1",
-  "keywords": ["voipano", "voip", "telephony", "call-center", "api", "voice-otp", "webhook"],
+  "keywords": [
+    "voipano",
+    "voip",
+    "telephony",
+    "call-center",
+    "api",
+    "voice-otp",
+    "webhook"
+  ],
   "homepage": "https://voipano.com",
-  "bugs": {"url": "https://github.com/voipano/node-voipano/issues"},
-  "repository": {"type": "git", "url": "git+https://github.com/voipano/node-voipano.git"},
+  "bugs": {
+    "url": "https://github.com/voipano/node-voipano/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/voipano/node-voipano.git"
+  },
   "license": "MIT",
   "author": "Voipano",
   "type": "module",
@@ -13,14 +26,32 @@
   "module": "./src/index.mjs",
   "types": "./types/index.d.ts",
   "exports": {
-    ".": {"types": "./types/index.d.ts", "import": "./src/index.mjs", "require": "./src/index.cjs"}
+    ".": {
+      "types": "./types/index.d.ts",
+      "import": "./src/index.mjs",
+      "require": "./src/index.cjs"
+    }
   },
-  "files": ["src/", "types/", "LICENSE", "README.md", "CHANGELOG.md"],
-  "engines": {"node": ">=22"},
+  "files": [
+    "src/",
+    "types/",
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "test": "node --test tests/*.test.mjs",
     "check": "npm test && npm pack --dry-run --json",
     "prepublishOnly": "npm test"
   },
-  "publishConfig": {"access": "public", "registry": "https://registry.npmjs.org/"}
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "devDependencies": {
+    "semantic-release": "26.0.1"
+  }
 }
