@@ -8,7 +8,7 @@ const files = [...new Set(
 )];
 
 const sensitiveNames =
-  /(^|\/)(\.env(?:\..*)?|\.npmrc|\.pypirc|id_rsa|id_ed25519)$|\.(pem|key|p12|pfx)$/i;
+  /(^|\/)(\.env(?:\..*)?|\.npmrc(?:\..*)?|\.pypirc(?:\..*)?|id_rsa|id_ed25519)$|\.(pem|key|p12|pfx)$/i;
 
 const patterns = [
   ["private-key", /-----BEGIN [A-Z ]*PRIVATE KEY-----/],
@@ -32,7 +32,7 @@ for (const file of files) {
   if (!statSync(file).isFile()) continue;
 
   const bytes = readFileSync(file);
-  if (bytes.includes(0)) continue;
+
 
   const content = bytes.toString("utf8");
 
