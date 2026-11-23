@@ -15,6 +15,8 @@ SDK رسمی و مستقل از وابستگی‌های Runtime برای **Node.
 npm install voipano
 ```
 
+صفحه رسمی پکیج: [npm](https://www.npmjs.com/package/voipano)
+
 ## استفاده
 
 ```js

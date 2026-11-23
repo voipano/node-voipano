@@ -24,6 +24,8 @@ Official, typed, dependency-free **Node.js** SDK for the Voipano Public API v1.
 npm install voipano
 ```
 
+Official package: [npm](https://www.npmjs.com/package/voipano)
+
 ## Quick start
 
 Set `VOIPANO_API_TOKEN` in your **server-side** environment, optionally set `VOIPANO_SERVICE_ID` for a service-scoped token:
