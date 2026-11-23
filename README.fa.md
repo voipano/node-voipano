@@ -1,5 +1,10 @@
 # پکیج رسمی Node.js ویپانو
 
+[![Tests](https://github.com/voipano/node-voipano/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/voipano/node-voipano/actions/workflows/tests.yml)
+[![npm version](https://img.shields.io/npm/v/voipano)](https://www.npmjs.com/package/voipano)
+[![License](https://img.shields.io/github/license/voipano/node-voipano)](LICENSE)
+[![Documentation](https://img.shields.io/badge/docs-EN%20%7C%20FA-blue)](README.fa.md)
+
 SDK رسمی و مستقل از وابستگی‌های Runtime برای **Node.js 22+** با پشتیبانی از JavaScript، TypeScript، ESM و CommonJS.
 
 **فقط برای بک‌اند:** توکن API را هرگز داخل مرورگر، کد Frontend یا اپ موبایل قرار ندهید.
@@ -51,6 +56,8 @@ npm test
 npm pack --dry-run
 ```
 
-در GitHub Actions، Push روی `main` تست‌ها را اجرا می‌کند؛ **فقط Push تگ جدید** مانند `v1.0.1` انتشار جدید در npm را فعال می‌کند. برای انتشار امن نیاز به Trusted Publisher با فایل `publish.yml` و Environment با نام `npm` است. برای انتشار اول ممکن است ابتدا لازم باشد نسخه را از طریق حساب خودتان منتشر و سپس Trusted Publisher را فعال کنید.
+در GitHub Actions، تست‌ها روی شاخه اصلی اجرا می‌شوند. گردش‌کار انتشار هنگام Push به main یا اجرای دستی فعال می‌شود و با semantic-release بر اساس پیام کامیت‌ها تصمیم می‌گیرد که نسخه جدید منتشر شود یا خیر. انتشار نسخه‌های جدید از طریق Trusted Publishing انجام می‌شود.
+
+پکیج قبلاً در npm منتشر شده است. تگ انتشار را دستی ایجاد یا جابه‌جا نکنید و نسخه منتشرشده را دوباره منتشر نکنید. جزئیات در [تنظیمات انتشار](release.config.mjs) آمده است.
 
 محدودیت: تست‌های آفلاین جایگزین تست اتصال واقعی API نیستند و قالب دقیق پاسخ‌ها در کالکشن مستند نشده است.

@@ -1,5 +1,10 @@
 # Voipano — Official Node.js SDK
 
+[![Tests](https://github.com/voipano/node-voipano/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/voipano/node-voipano/actions/workflows/tests.yml)
+[![npm version](https://img.shields.io/npm/v/voipano)](https://www.npmjs.com/package/voipano)
+[![License](https://img.shields.io/github/license/voipano/node-voipano)](LICENSE)
+[![Documentation](https://img.shields.io/badge/docs-EN%20%7C%20FA-blue)](README.md)
+
 Official, typed, dependency-free **Node.js** SDK for the Voipano Public API v1.
 
 [وب‌سرویس ویپانو — راهنمای فارسی](README.fa.md) · [API collection](docs/voipano-webservice.postman_collection.json)
@@ -146,9 +151,9 @@ npm test
 npm pack --dry-run
 ```
 
-GitHub Actions runs tests on Node 22, 24, 26. The `publish.yml` workflow publishes **only on a new `vX.Y.Z` Git tag** and checks that the tag matches `package.json`. It is configured for npm Trusted Publishing with OIDC and a GitHub environment named `npm`.
+GitHub Actions tests Node.js 22, 24, and 26. The publish workflow runs on pushes to main or manual dispatch. It uses semantic-release to determine whether a new version is warranted from commit messages. Qualifying releases create a version tag and publish to npm using Trusted Publishing (OIDC).
 
-**First publication:** verify that the npm name `voipano` is available from your local terminal (`npm view voipano version`). For an **unpublished** npm package, publish the initial version interactively from your npm account, then configure the Trusted Publisher in the new package's settings. You can then push the Git tag for the already-published initial version (the workflow will detect and skip it). New version tags publish later releases automatically. Do not reuse a published version or force-move release tags. Trusted publishing requires npm CLI >=11.5.1 and Node >=22.14.0; enable direct `npm publish` permission for the trusted publisher. See [npm docs](https://docs.npmjs.com/trusted-publishers/).
+The package is already published on npm. Do not manually create or move release tags, or republish existing versions. See [release configuration](release.config.mjs).
 
 ## Notes and limitations
 
